@@ -16,6 +16,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
     "child_process": "^1.0.2",
+    "express": "^5.1.0",
     "typescript": "^5.8.3",
     "zod": "^3.24.2"
   }

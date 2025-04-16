@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const decoder = new TextDecoder()
+        fetch('http://localhost:3001/sse', { method: 'get' }).then(async res => {
+            const reader = res.body.getReader();
+            const { value } = await reader.read()
+            const text = decoder.decode(value)
+            return text.split('?').at(-1)
+        }).then(qs => {
+            fetch(`http://localhost:3001/messages?${qs}`, { method: 'post' }).then(r => r.text()).then(console.log);
+        })
+    </script>
+</body>
+
+</html>
