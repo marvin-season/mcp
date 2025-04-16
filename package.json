@@ -1,0 +1,22 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "npx-server": "./npx-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "child_process": "^1.0.2",
+    "typescript": "^5.8.3",
+    "zod": "^3.24.2"
+  }
+}
