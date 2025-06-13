@@ -7,8 +7,9 @@ import {
   ForecastResponse,
 } from "./nws.js";
 import { formatAlert, formatForecast } from "./format.js";
+import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
-export function registerWeatherTools(server: any) {
+export function registerWeatherTools(server: McpServer) {
   server.tool(
     "get-alerts",
     "Get weather alerts for a state",
