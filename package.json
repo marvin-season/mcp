@@ -5,20 +5,26 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && chmod 755 build/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "files": [
+    "build"
+  ],
   "bin": {
-    "npx-server": "./npx-server.js"
+    "weather": "./build/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
     "child_process": "^1.0.2",
     "express": "^5.1.0",
-    "typescript": "^5.8.3",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "typescript": "^5.8.3"
   },
   "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }
